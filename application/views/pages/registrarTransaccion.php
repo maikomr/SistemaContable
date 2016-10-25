@@ -9,34 +9,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Sistema Contable</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="page-header">
-            <h1>Registrar Transaccion</h1>
-        </div>
-        <form id="form-registrar-transaccion">
-            <label for="cuenta-corriente">Cuenta Corriente</label>
-            <input id="cuenta-corriente" class="form-control" type="text" name="cuentaCorriente" placeholder="Cuenta Corriente">
-            <br>
-            <label for="fecha">Fecha</label> 
-            <input id="fecha" class="form-control" type="text" name="fecha" placeholder="Fecha">
-            <br>
-            <label for="tipo-transaccion">Tipo de Transaccion</label>
-            <div id="tipo-transaccion" class="radio">
-                <label class="radio-inline">
-                    <input type="radio" name="tipoTransaccion" value="DEBE"> Debe
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="tipoTransaccion" value="HABER"> Haber
-                </label>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 form">
+                <div class="page-header">
+                    <h1>Registrar Transaccion</h1>
+                </div>
+                <form id="form-registrar-transaccion">
+                    <label for="cuenta-corriente">Cuenta Corriente</label>
+                    <input id="cuenta-corriente" class="form-control" type="text" name="cuentaCorriente" placeholder="Cuenta Corriente">
+                    <br>
+                    <label for="fecha">Fecha</label> 
+                    <input id="fecha" class="form-control" type="text" name="fecha" placeholder="Fecha">
+                    <br>
+                    <label for="tipo-transaccion">Tipo de Transaccion</label>
+                    <div id="tipo-transaccion" class="radio">
+                        <label class="radio-inline">
+                            <input type="radio" name="tipoTransaccion" value="DEBE"> Debe
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="tipoTransaccion" value="HABER"> Haber
+                        </label>
+                    </div>
+                    <br>
+                    <label for="asiento-contable">Asiento Contable</label>
+                    <input id="asiento-contable" class="form-control" type="text" name="asientoContable" placeholder="Asiento Contable">
+                    <br>
+                </form>
+                <button class="btn btn-primary center-block" type="submit" form="form-registrar-transaccion" value="Guardar">Guardar</button>
+                <br>
             </div>
-            <br>
-            <label for="asiento-contable">Asiento Contable</label>
-            <input id="asiento-contable" class="form-control" type="text" name="asientoContable" placeholder="Asiento Contable">
-            <br>
-        </form>
-        <button class="btn btn-primary" type="submit" form="form-registrar-transaccion" value="Guardar">Guardar</button>
+        </div>
     </div>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
