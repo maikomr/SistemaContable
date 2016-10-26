@@ -15,7 +15,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 show_404();
             } else {
                 // load the page
-                $this->load->view('pages/libro-diario/'.$page);
+                $data= array('detalle'=> $this->libro_diario->getAccount());
+                $this->load->view('pages/libro-diario/'.$page, $data);
             }
         }
 
@@ -24,12 +25,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $this->libro_diario->addAccount();
                 redirect('libro-diario/index');
             }
-        }
-        public function getAccount(){
-            $data= array(
-                    'detalle'=> $this->libro_diario->getAccount()
-                    );
-        $this->load->view('pages/libro-diario/index', $data);
         }
     }
 ?>

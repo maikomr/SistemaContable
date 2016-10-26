@@ -23,16 +23,14 @@
   <td><strong> Debe </strong></td>
   <td><strong> Haber </strong></td>
 </tr>
- <?php foreach ($detalle as $detail): ?> 
- <!-- <tr>
-  <td> <?=$detail->idTransaction ?> </td>
-  <td> <?=$detail->date ?> </td>
-  <td> <?=$detail->account ?> </td>
-  <td> <?=$detail->payrate ?> </td>
-  </tr> -->
-  <p> 
-    <?=$detail->account?>
-  </p>
+<?php foreach ($detalle as $detail): ?> 
+    <tr>
+        <td> <?=$detail->idTransaction ?> </td>
+        <td> <?=$detail->date ?> </td>
+        <td> <?=$detail->account ?> </td>
+        <td> <?=$detail->payrate ?> </td>
+        <td> <?=$detail->payrate ?> </td>
+    </tr>
   <?php endforeach; ?>
  </table>
 </div>
