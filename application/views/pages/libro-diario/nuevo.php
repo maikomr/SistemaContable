@@ -16,9 +16,14 @@
                 <div class="page-header">
                     <h1>Registrar Transaccion</h1>
                 </div>
-                <form id="form-registrar-transaccion">
+                <form
+                    id="form-registrar-transaccion"
+                    name="form"
+                    action="<?= base_url();?>LibroDiario/addAccount"
+                    method="POST"
+                >
                     <label for="cuenta-corriente">Cuenta Corriente</label>
-                    <input id="cuenta-corriente" class="form-control" type="text" name="cuentaCorriente" placeholder="Cuenta Corriente">
+                    <input id="cuenta-corriente" class="form-control" type="text" name="cuenta" placeholder="Cuenta Corriente">
                     <br>
                     <label for="fecha">Fecha</label> 
                     <input id="fecha" class="form-control" type="text" name="fecha" placeholder="Fecha">
@@ -34,10 +39,10 @@
                     </div>
                     <br>
                     <label for="asiento-contable">Asiento Contable</label>
-                    <input id="asiento-contable" class="form-control" type="text" name="asientoContable" placeholder="Asiento Contable">
+                    <input id="asiento-contable" class="form-control" type="text" name="saldo" placeholder="Asiento Contable">
                     <br>
                 </form>
-                <button class="btn btn-primary center-block" type="submit" form="form-registrar-transaccion" value="Guardar">Guardar</button>
+                <button class="btn btn-primary center-block" type="submit" form="form-registrar-transaccion" name="guardar" value="guardar">Guardar</button>
                 <br>
             </div>
         </div>

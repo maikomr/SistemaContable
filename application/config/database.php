@@ -69,16 +69,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
-*/
+*///
 $active_group = 'default';
 $query_builder = TRUE;
-
+//modificar esta parte para que funcione la base de datos 1
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => '',
+	'username' => 'root',
 	'password' => '',
-	'database' => '',
+	'database' => 'contaumssg2',//cambiar por nombre la base de datos
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
