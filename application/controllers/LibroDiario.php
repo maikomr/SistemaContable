@@ -25,5 +25,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 redirect('libro-diario/index');
             }
         }
+        public function getAccount(){
+            $data= array(
+                    'detalle'=> $this->libro_diario->getAccount()
+                    );
+        $this->load->view('pages/libro-diario/index', $data);
+        }
     }
 ?>
