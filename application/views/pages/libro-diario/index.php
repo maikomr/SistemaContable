@@ -17,39 +17,18 @@
   <td><strong> Debe </strong></td>
   <td><strong> Haber </strong></td>
 </tr>
- 
-<tr>
-  <td>1</td>
-  <td>10/10/10</td>
-  <td>Compra de Perros</td>
-  <td>1000</td>
-  <td>2000</td>
-</tr>
- 
- <tr>
-  <td>2</td>
-  <td>11/10/10</td>
-  <td>Compra de Gatos</td>
-  <td>2000</td>
-  <td>1000</td>
-</tr>
- 
-<tr>
-  <td>3</td>
-  <td>15/10/10</td>
-  <td>Compra de mas perros</td>
-  <td>2000</td>
-  <td>4000</td>
-</tr>
- 
-<tr>
-  <td>4</td>
-  <td>20/10/10</td>
-  <td>Venta de Gatos</td>
-  <td>0</td>
-  <td>4000</td>
-</tr>
-</table>
+ <?php foreach ($detalle as $detail): ?> 
+ <!-- <tr>
+  <td> <?=$detail->idTransaction ?> </td>
+  <td> <?=$detail->date ?> </td>
+  <td> <?=$detail->account ?> </td>
+  <td> <?=$detail->payrate ?> </td>
+  </tr> -->
+  <p> 
+    <?=$detail->account?>
+  </p>
+  <?php endforeach; ?>
+ </table>
 </div>
 </body>
 </html>
