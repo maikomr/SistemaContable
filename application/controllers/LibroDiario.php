@@ -19,12 +19,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
         }
 
-        public function addAccount(){
-            // $this->load->view('libro_diario/registrarTransaccion');
+        public function addAccount() {
             if ($this->input->post('guardar')) {
-                    $this->libro_diario->addAccount();
-                    echo 'Sew ha guardado correctamente';
-                }   
+                $this->libro_diario->addAccount();
+                redirect('libro-diario/index');
+            }
         }
     }
 ?>

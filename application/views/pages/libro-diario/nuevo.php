@@ -19,7 +19,7 @@
                 <form
                     id="form-registrar-transaccion"
                     name="form"
-                    action="<?= base_url();?>LibroDiario/addAccount"
+                    action="action/addAccount"
                     method="POST"
                 >
                     <label for="cuenta-corriente">Cuenta Corriente</label>
