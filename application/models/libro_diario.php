@@ -9,8 +9,9 @@ class Libro_diario extends CI_Model
 	public function addAccount(){
 		$data= array(
 					'account'=>$this->input->post('cuenta'),
-					'date'=>$this->input->post('fecha'), 
-					'payrate'=>$this->input->post('saldo')
+					'date'=>$this->input->post('fecha'),
+					'payrate'=>$this->input->post('saldo'),
+					'type'=>$this->input->post('tipoTransaccion')
 					);
 		$this->db->insert('transaction', $data);
 	}
