@@ -11,12 +11,12 @@
 <h1>LIBRO DIARIO</h1>
  <div class="container">
      
-         <button type="button" class="btn btn-default pull-right btn-accion" aria-label="Nueva Transaccion" >
+         <a role="button" class="btn btn-default pull-right btn-accion" href="../libro-diario/nuevo" >
             <span class="glyphicon glyphicon-plus"></span> Nueva Transaccion
-         </button>
+         </a>
           
-<table class="table table-striped table-bordered">
-<tr class= "success">
+<table class="table table-bordered table-hover">
+<tr class= "info">
   <td><strong> Numero </strong></td>
   <td><strong> Fecha </strong></td>
   <td><strong> Detalle </strong></td>
@@ -25,7 +25,7 @@
 </tr>
 <?php foreach ($detalle as $detail): ?> 
     <tr>
-        <td> <?=$detail->idTransaction ?> </td>
+        <td><strong> <?=$detail->idTransaction ?> </strong></td>
         <td> <?=$detail->date ?> </td>
         <td> <?=$detail->account ?> </td>
         <td> <?=$detail->payrate ?> </td>
