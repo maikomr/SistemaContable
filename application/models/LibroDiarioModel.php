@@ -15,10 +15,9 @@ class LibroDiarioModel extends CI_Model
 					);
 		$this->db->insert('transaction', $data);
 	}
-	public function getAccount(){
-		$consulta= $this->db->query('Select * from transaction');
-		//$consulta= $this ->db->get('transaction');
-		return $consulta->result();
+	public function getAllTransactions(){
+		$query = $this->db->get('transaction');
+		return $query->result();
 	}
 }
 

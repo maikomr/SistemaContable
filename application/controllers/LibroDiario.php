@@ -14,10 +14,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 show_404();
             } else {
                 // load the page
-                $data= array('detalle'=> $this->LibroDiarioModel->getAccount());
+                $data= array('transactions'=> $this->LibroDiarioModel->getAllTransactions());
                 
                 // calculate total debit and total credit
-                $transactions = $data['detalle'];
+                $transactions = $data['transactions'];
                 $totalDebit = 0;
                 $totalCredit = 0;                
                 foreach ($transactions as $transaction) {
@@ -30,9 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $data['totalDebit'] = $totalDebit;
                 $data['totalCredit'] = $totalCredit;
                 
-                $this->load->view('pages/libro-diario/'.$page, $data);
-                
-                
+                $this->load->view('pages/libro-diario/'.$page, $data);                
             }
         }
 

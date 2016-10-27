@@ -28,15 +28,15 @@
   <td><strong> Debe </strong></td>
   <td><strong> Haber </strong></td>
 </tr>
-<?php foreach ($detalle as $detail): ?>
+<?php foreach ($transactions as $transaction): ?>
     <tr>
-        <td><strong> <?php echo $detail->idTransaction; ?> </strong></td>
-        <td> <?php echo $detail->date; ?> </td>
-        <td> <?php echo $detail->account; ?> </td>
+        <td><strong> <?php echo $transaction->idTransaction; ?> </strong></td>
+        <td> <?php echo $transaction->date; ?> </td>
+        <td> <?php echo $transaction->account; ?> </td>
         <td>
           <?php
-            if ($detail->type === 'DEBE') {
-            echo $detail->payrate;
+            if ($transaction->type === 'DEBE') {
+            echo $transaction->payrate;
             } else {
               echo '';
             }
@@ -44,8 +44,8 @@
         </td>
         <td>
           <?php
-            if ($detail->type === 'HABER') {
-            echo $detail->payrate;
+            if ($transaction->type === 'HABER') {
+            echo $transaction->payrate;
             } else {
               echo '';
             }
