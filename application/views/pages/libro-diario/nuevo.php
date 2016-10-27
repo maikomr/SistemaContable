@@ -10,12 +10,16 @@
     <link href="../../css/main.css" rel="stylesheet">
 </head>
 <body>
-    <div class="page-header">
-        <h1>Registrar Transaccion</h1>
-    </div>
+     <nav class="navbar navbar-default dark-color-background">
+        <div class="container-fluid">
+            <div class="navbar-header titulo">
+                <h1>Registrar Transaccion</h1>
+            </div>
+        </div>
+     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-4 col-md-offset-4 form">
                 <form
                     id="form-registrar-transaccion"
                     name="form"
@@ -42,7 +46,7 @@
                     <input id="asiento-contable" class="form-control" type="text" name="saldo" placeholder="Asiento Contable">
                     <br>
                 </form>
-                <button class="btn btn-primary center-block" type="submit" form="form-registrar-transaccion" name="guardar" value="guardar">Guardar</button>
+                <button class="btn btn-primary center-block button-softline" type="submit" form="form-registrar-transaccion" name="guardar" value="guardar">Guardar</button>
                 <br>
             </div>
         </div>

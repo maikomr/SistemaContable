@@ -1,3 +1,27 @@
 .btn-accion {
     margin-bottom: 10px;
 }
+
+.form {
+    margin-top: 100px;
+}
+
+.titulo {
+    margin-left: 25px;
+    color: #FFFFFF;
+}
+
+.dark-color-background {
+    background-color: #009688;
+}
+
+.primary-color-background, .primary-color-background:hover {
+    background-color: #B2DFDB !important;
+}
+
+.button-softline, .button-softline:hover {
+    background-color: #FF5722;
+    color:#FFFFFF; 
+    border-color: #FF5722;
+    text-emphasis: bold;
+}

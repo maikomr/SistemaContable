@@ -7,16 +7,21 @@
 <title>LIBRO DIARIO</title>
 </head>
 <body>
-
-<h1>LIBRO DIARIO</h1>
+    <nav class="navbar navbar-default dark-color-background">
+        <div class="container-fluid">
+             <div class="navbar-header titulo">
+                 <h1>Libro Diario</h1>
+             </div>
+        </div>
+    </nav>
  <div class="container">
      
-         <a role="button" class="btn btn-default pull-right btn-accion" href="../libro-diario/nuevo" >
+         <a role="button" class="btn btn-default pull-right btn-accion button-softline" href="../libro-diario/nuevo" >
             <span class="glyphicon glyphicon-plus"></span> Nueva Transaccion
          </a>
           
 <table class="table table-bordered table-hover">
-<tr class= "info">
+<tr class= "primary-color-background">
   <td><strong> Numero </strong></td>
   <td><strong> Fecha </strong></td>
   <td><strong> Detalle </strong></td>
