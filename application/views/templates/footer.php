@@ -1,6 +1,6 @@
 <footer>
-        <p>&copy; 2016 Softline - UMSS.</p>
-    </footer>
+    <p>&copy; 2016 Softline - UMSS.</p>
+</footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../../js/jquery-3.1.1.min.js"></script>

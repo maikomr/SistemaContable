@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="../../css/main.css">
     </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top dark-color-background">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,12 +18,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Softline</a>
+          <a class="navbar-brand nav-menu" href="#">Softline</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="http://sistema-contable">Inicio</a></li>
-            <li><a href="http://sistema-contable/index.php/libro-diario">Libro Diario</a></li>
+            <li><a class="nav-menu" href="http://sistema-contable">Inicio</a></li>
+            <li><a class="nav-menu" href="http://sistema-contable/index.php/libro-diario">Libro Diario</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">

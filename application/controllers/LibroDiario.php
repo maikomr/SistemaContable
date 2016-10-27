@@ -26,7 +26,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['totalDebit'] = $totalDebit;
             $data['totalCredit'] = $totalCredit;
 
+            $this->load->view('templates/header');
             $this->load->view('libro-diario/index', $data);
+            $this->load->view('templates/footer');
         }
 
         public function registrar()
@@ -40,7 +42,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->form_validation->set_rules('asientoContable', 'Asiento contable', 'required');
 
             if ($this->form_validation->run() === FALSE) {
+                $this->load->view('templates/header');
                 $this->load->view('libro-diario/registrar');
+                $this->load->view('templates/footer');
             } else {
                 $this->LibroDiarioModel->registerTransaction();
                 redirect('http://sistema-contable/index.php/libro-diario');

@@ -1,6 +1,9 @@
-.logo-content {
-  padding: 40px 15px;
-  text-align: center;
+.content {
+  padding-top: 50px;
+}
+
+.jumbotron {
+    text-align: center;
 }
 
 footer {
@@ -8,16 +11,20 @@ footer {
 }
 
 .btn-accion {
-    margin-bottom: 10px;
+    margin: 20px 0px 10px;
 }
 
 .form {
     margin-top: 100px;
 }
 
-.titulo {
-    margin-left: 25px;
-    color: #FFFFFF;
+.nav-menu {
+    color: #FFFFFF !important;
+}
+
+.nav-menu:hover {
+    color: #009688 !important;
+    background-color: #FFFFFF !important;
 }
 
 .dark-color-background {
@@ -28,7 +35,8 @@ footer {
     background-color: #B2DFDB !important;
 }
 
-.button-softline, .button-softline:hover {
+.button-softline, .button-softline:link, .button-softline:hover,
+    .button-softline:active, .button-softline:visited {
     background-color: #FF5722;
     color:#FFFFFF; 
     border-color: #FF5722;
