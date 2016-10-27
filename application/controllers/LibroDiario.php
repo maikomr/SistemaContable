@@ -15,7 +15,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             } else {
                 // load the page
                 $data= array('detalle'=> $this->LibroDiarioModel->getAccount());
+                
+                // calculate total debit and total credit
+                $transactions = $data['detalle'];
+                $totalDebit = 0;
+                $totalCredit = 0;                
+                foreach ($transactions as $transaction) {
+                    if($transaction->type == 'DEBE') {
+                        $totalDebit += $transaction->payrate;
+                    } else if($transaction->type == 'HABER') {
+                        $totalCredit += $transaction->payrate;
+                    }
+                }
+                $data['totalDebit'] = $totalDebit;
+                $data['totalCredit'] = $totalCredit;
+                
                 $this->load->view('pages/libro-diario/'.$page, $data);
+                
+                
             }
         }
 

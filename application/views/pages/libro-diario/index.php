@@ -53,7 +53,19 @@
         </td>
     </tr>
   <?php endforeach; ?>
+    <tr>
+    
+    </tr>
  </table>
+     <div>
+         <span>
+            <?php echo 'Total Debe: ', $totalDebit; ?>
+         </span>
+         -
+         <span>
+            <?php echo 'Total Haber: ', $totalCredit; ?>
+         </span>
+     </div>
 </div>
 </body>
 </html>
