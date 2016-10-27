@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 // $route['404_override'] = '';
 // $route['translate_uri_dashes'] = FALSE;
-
+$route['libro-diario/registrar'] = 'libroDiario/registrar';
 $route['libro-diario'] = 'libroDiario';
 $route['libro-diario/action/(:any)'] = 'libroDiario/$1';
 

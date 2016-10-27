@@ -16,7 +16,7 @@
     </nav>
  <div class="container">
      
-         <a role="button" class="btn btn-default pull-right btn-accion button-softline" href="../libro-diario/nuevo" >
+         <a role="button" class="btn btn-default pull-right btn-accion button-softline" href="libro-diario/registrar" >
             <span class="glyphicon glyphicon-plus"></span> Nueva Transaccion
          </a>
           

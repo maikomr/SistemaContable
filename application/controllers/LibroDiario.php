@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         function __construct(){
             parent::__construct(); 
             $this->load->model('LibroDiarioModel');
+            $this->load->helper('url');
         }
 
         public function index()
@@ -28,10 +29,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->view('libro-diario/index', $data);
         }
 
-        public function addAccount() {
-            if ($this->input->post('guardar')) {
-                $this->LibroDiarioModel->addAccount();
-                redirect('libro-diario/index');
+        public function registrar()
+        {
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+
+            $this->form_validation->set_rules('cuenta', 'Cuenta corriente', 'required');
+            $this->form_validation->set_rules('fecha', 'Fecha', 'required');
+            $this->form_validation->set_rules('tipoTransaccion', 'Tipo de transaccion', 'required');
+            $this->form_validation->set_rules('asientoContable', 'Asiento contable', 'required');
+
+            if ($this->form_validation->run() === FALSE) {
+                $this->load->view('libro-diario/registrar');
+            } else {
+                $this->LibroDiarioModel->registerTransaction();
+                $this->index();
             }
         }
     }

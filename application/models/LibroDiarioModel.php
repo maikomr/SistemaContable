@@ -6,14 +6,14 @@ class LibroDiarioModel extends CI_Model
 		$this->load->database();
 	}
 
-	public function addAccount(){
+	public function registerTransaction(){
 		$data= array(
-					'account'=>$this->input->post('cuenta'),
-					'date'=>$this->input->post('fecha'),
-					'payrate'=>$this->input->post('saldo'),
-					'type'=>$this->input->post('tipoTransaccion')
-					);
-		$this->db->insert('transaction', $data);
+			'account'=>$this->input->post('cuenta'),
+			'date'=>$this->input->post('fecha'),
+			'type'=>$this->input->post('tipoTransaccion'),
+			'payrate'=>$this->input->post('asientoContable'),
+		);
+		return $this->db->insert('transaction', $data);
 	}
 	
 	public function getAllTransactions(){
