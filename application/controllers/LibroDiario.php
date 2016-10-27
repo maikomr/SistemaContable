@@ -7,31 +7,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->model('LibroDiarioModel');
         }
 
-        public function view($page = 'index')
+        public function index()
         {
-            if (!file_exists(APPPATH.'views/pages/libro-diario/'.$page.'.php')) {
-                // we don't have a page for that
-                show_404();
-            } else {
-                // load the page
-                $data= array('transactions'=> $this->LibroDiarioModel->getAllTransactions());
-                
-                // calculate total debit and total credit
-                $transactions = $data['transactions'];
-                $totalDebit = 0;
-                $totalCredit = 0;                
-                foreach ($transactions as $transaction) {
-                    if($transaction->type == 'DEBE') {
-                        $totalDebit += $transaction->payrate;
-                    } else if($transaction->type == 'HABER') {
-                        $totalCredit += $transaction->payrate;
-                    }
+            $data['transactions'] = $this->LibroDiarioModel->getAllTransactions();
+
+            // calculate total debit and total credit
+            $transactions = $data['transactions'];
+            $totalDebit = 0;
+            $totalCredit = 0;                
+            foreach ($transactions as $transaction) {
+                if($transaction->type == 'DEBE') {
+                    $totalDebit += $transaction->payrate;
+                } else if($transaction->type == 'HABER') {
+                    $totalCredit += $transaction->payrate;
                 }
-                $data['totalDebit'] = $totalDebit;
-                $data['totalCredit'] = $totalCredit;
-                
-                $this->load->view('pages/libro-diario/'.$page, $data);                
             }
+            $data['totalDebit'] = $totalDebit;
+            $data['totalCredit'] = $totalCredit;
+
+            $this->load->view('libro-diario/index', $data);
         }
 
         public function addAccount() {
