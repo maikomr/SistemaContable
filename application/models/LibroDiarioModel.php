@@ -1,5 +1,5 @@
 <?php
-class Libro_diario extends CI_Model
+class LibroDiarioModel extends CI_Model
 {
 	function __construct(){
 		parent::__construct();
