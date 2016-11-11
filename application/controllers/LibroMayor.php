@@ -30,13 +30,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
             $data['totalDebit'] = $totalDebit;
             $data['totalCredit'] = $totalCredit;
-            $data['names'] = $this->LibroMayorModel->names();
+            
 
             $this->load->view('templates/header');
             $this->load->view('libro-mayor/index',$data);
             $this->load->view('templates/footer');
         }
-ss
 
     }
 ?>
