@@ -17,25 +17,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['accounts'] = $this->LibroMayorModel->getAllAccounts();
             $accounts = $data['accounts'];
 
-            //calculate total debit and total credit
-            $transactions = $data['transactions'];
-            $totalDebit = 0;
-            $totalCredit = 0;                
-            foreach ($transactions as $transaction) {
-                if($transaction->type == 'DEBE') {
-                    $totalDebit += $transaction->payrate;
-                } else if($transaction->type == 'HABER') {
-                    $totalCredit += $transaction->payrate;
-                }
-            }
-            $data['totalDebit'] = $totalDebit;
-            $data['totalCredit'] = $totalCredit;
-            
+            $data['arrayDebeSuma'] = $this->LibroMayorModel->getSumOfAllAccount('DEBE');
+            $data['arrayHaberSuma'] = $this->LibroMayorModel->getSumOfAllAccount('HABER');
 
             $this->load->view('templates/header');
             $this->load->view('libro-mayor/index',$data);
             $this->load->view('templates/footer');
         }
+
 
     }
 ?>

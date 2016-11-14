@@ -1,16 +1,17 @@
 <div class="container content">
     <div class="navbar-header">
       <h1>Libro mayor</h1>
-    </div>
-    <table class="table table-bordered table-hover">
-        <tr class= "primary-color-background">
-            <td><strong> Debe </strong></td>
-            <td><strong> Haber </strong></td>
-        </tr>
+    </div>    
+        
         <?php
             foreach ($accounts as $account) {
         ?>
-            <td><strong> <?php echo $account->account; ?> </strong></td>
+            <table class="table table-bordered table-hover">
+                <td><strong> <?php echo $account->account; ?> </strong></td>
+                <tr class= "primary-color-background">
+                    <td><strong> Debe </strong></td>
+                    <td><strong> Haber </strong></td>
+                </tr>
         <?php
                 $arrayDebe = array();
                 $arrayHaber = array();
@@ -40,6 +41,7 @@
                     <td>
                         <?php 
                             echo $arrayDebe[$i];
+                            
                         ?>
                     </td>
                     <td>
@@ -52,7 +54,31 @@
                         ?>
                     </td>
                 </tr>
-                <?php endFor;
+                <?php endFor; ?>
+                <tr>
+                    <td>
+                        <?php
+                            foreach ($arrayDebeSuma as $suma) {         
+                                if(($suma->account)==($account->account)){
+                                    echo $suma->payrate;
+                                }
+                            }
+                        ?>
+                    </td>
+                    <td>
+                        <?php 
+                            foreach ($arrayHaberSuma as $suma) {         
+                                if(($suma->account)==($account->account)){
+                                    echo $suma->payrate;
+                                }else{
+                                    echo '';
+                                }
+                            }
+                        ?>
+                    </td>
+                </tr>
+                <?php
+                    
             }
         ?>
 </div>
