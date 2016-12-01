@@ -2,7 +2,7 @@
     <div class="navbar-header">
       <h1>Libro Diario</h1>
     </div>
-    <a role="button" class="btn btn-default pull-right btn-accion button-softline" href="http://sistema-contable/index.php/libro-diario/registrar" >
+    <a role="button" class="btn btn-default pull-right btn-accion button-softline" href="http://sistema-contable.com/index.php/libro-diario/registrar" >
         <span class="glyphicon glyphicon-plus"></span> Nueva Transaccion
     </a>
     <table class="table table-bordered table-hover">
