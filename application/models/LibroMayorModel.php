@@ -12,13 +12,13 @@ class LibroMayorModel extends CI_Model
 	}
 
 	public function getAllAccounts(){
-		$this->db->distinct();
+		$this->db->select('account');
+		$this->db->from('transaction');
 		$this->db->group_by('account');
-		$query = $this->db->get('transaction');
-
 		
-		if($query->num_rows() > 0 )
-        {
+		$query = $this->db->get();
+		
+		if ($query->num_rows() > 0) {
             return $query->result();
         }
 

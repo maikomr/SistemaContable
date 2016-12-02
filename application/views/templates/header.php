@@ -25,7 +25,7 @@
             <li><a class="nav-menu" href="http://sistema-contable.com">Inicio</a></li>
             <li><a class="nav-menu" href="http://sistema-contable.com/index.php/libro-diario">Libro Diario</a></li>
             
-            <li><a class="nav-menu" href="http://sistema-contable.com/index.php/libro-mayor">Libro mayor</a></li>
+            <li><a class="nav-menu" href="http://sistema-contable.com/index.php/libro-mayor">Libro Mayor</a></li>
 
           </ul>
           <form class="navbar-form navbar-right">
