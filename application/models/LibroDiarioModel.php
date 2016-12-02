@@ -7,10 +7,20 @@ class LibroDiarioModel extends CI_Model
 	}
 
 	public function registerTransaction(){
-		$account = array('name'=>$this->input->post('cuenta'));
+		$accountName = $this->input->post('cuenta');
+		$accountId;
 		$this->db->trans_start();
-		$this->db->insert('accounts', $account);
-		$accountId = $this->db->insert_id();
+		$this->db->select('id');
+		$this->db->from('accounts');
+		$this->db->where('name', $accountName);
+		$query = $this->db->get();
+		if ($query->num_rows() != 0) {
+			$accountId = $query->result_array()[0]['id'];
+		} else {
+			$account = array('name'=>$accountName);
+			$this->db->insert('accounts', $account);
+			$accountId = $this->db->insert_id();
+		}
 		$transaction = array(
 			'date'=>$this->input->post('fecha'),
 			'type'=>$this->input->post('tipoTransaccion'),
@@ -23,7 +33,7 @@ class LibroDiarioModel extends CI_Model
 	}
 	
 	public function getAllTransactions(){
-		$query = $this->db->query('SELECT A.name as account, T.idTransaction, T.date, T.type, T.payrate FROM accounts A, transaction T WHERE A.id = T.accountId');
+		$query = $this->db->query('SELECT A.name as account, T.idTransaction, T.date, T.type, T.payrate FROM accounts A, transaction T WHERE A.id = T.accountId ORDER BY idTransaction');
 		return $query->result();
 	}
 
