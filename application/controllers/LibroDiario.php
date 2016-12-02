@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $this->load->view('templates/footer');
             } else {
                 $this->LibroDiarioModel->registerTransaction();
-                redirect('http://sistema-contable.com/index.php/libro-diario');
+                redirect('http://sistema-contable/index.php/libro-diario');
             }
         }
     }

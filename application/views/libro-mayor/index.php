@@ -9,7 +9,13 @@
                 <td><strong>Cuentas</strong></td>
             </tr>
             <?php foreach ($accounts as $account) { ?>
-                <tr><td><?php echo $account->account; ?></td></tr>
+                <tr>
+                    <td>
+                        <a href="<?php echo 'http://sistema-contable/index.php/libro-mayor/'.$account->account; ?>">
+                            <?php echo $account->account; ?>
+                        </a>
+                    </td>
+                </tr>
             <?php } ?>
         </table>
     </div>

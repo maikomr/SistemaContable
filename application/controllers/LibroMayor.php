@@ -16,6 +16,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->view('templates/footer');
         }
 
-
+        public function verLibroMayor($account)
+        {
+            // $data['libroMayor'] = $this->LibroMayorModel->getLibroMayor($account);
+            $data['account'] = $account;
+            $this->load->view('templates/header');
+            $this->load->view('libro-mayor/libro-mayor',$data);
+            $this->load->view('templates/footer');
+        }
     }
 ?>

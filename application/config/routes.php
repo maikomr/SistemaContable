@@ -54,8 +54,6 @@ $route['default_controller'] = 'welcome';
 // $route['translate_uri_dashes'] = FALSE;
 $route['libro-diario/registrar'] = 'libroDiario/registrar';
 $route['libro-diario'] = 'libroDiario';
-$route['libro-diario/action/(:any)'] = 'libroDiario/$1';
 
 $route['libro-mayor']='LibroMayor';
-
-
+$route['libro-mayor/:any'] = 'LibroMayor/verLibroMayor/$1';

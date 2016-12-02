@@ -22,10 +22,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a class="nav-menu" href="http://sistema-contable.com">Inicio</a></li>
-            <li><a class="nav-menu" href="http://sistema-contable.com/index.php/libro-diario">Libro Diario</a></li>
+            <li><a class="nav-menu" href="http://sistema-contable">Inicio</a></li>
+            <li><a class="nav-menu" href="http://sistema-contable/index.php/libro-diario">Libro Diario</a></li>
             
-            <li><a class="nav-menu" href="http://sistema-contable.com/index.php/libro-mayor">Libro Mayor</a></li>
+            <li><a class="nav-menu" href="http://sistema-contable/index.php/libro-mayor">Libro Mayor</a></li>
 
           </ul>
           <form class="navbar-form navbar-right">
