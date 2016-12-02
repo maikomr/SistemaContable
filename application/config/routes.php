@@ -56,4 +56,4 @@ $route['libro-diario/registrar'] = 'libroDiario/registrar';
 $route['libro-diario'] = 'libroDiario';
 
 $route['libro-mayor']='LibroMayor';
-$route['libro-mayor/:any'] = 'LibroMayor/verLibroMayor/$1';
+$route['libro-mayor/(:any)'] = 'LibroMayor/verLibroMayor/$1';
