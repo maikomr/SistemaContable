@@ -11,8 +11,8 @@
             <?php foreach ($accounts as $account) { ?>
                 <tr>
                     <td>
-                        <a href="<?php echo 'http://sistema-contable/index.php/libro-mayor/'.$account->account; ?>">
-                            <?php echo $account->account; ?>
+                        <a href="<?php echo 'http://sistema-contable/index.php/libro-mayor/'.$account->id; ?>">
+                            <?php echo $account->name; ?>
                         </a>
                     </td>
                 </tr>
