@@ -20,7 +20,44 @@ class LibroMayorModel extends CI_Model
         } else {
         	return false;
         }
+	}
 
+	public function getAccountName($id) {
+		$this->db->select('name');
+		$this->db->from('accounts');
+		$this->db->where('id',$id);
+		$query = $this->db->get();
+		if ($query->num_rows() > 0) {
+            return $query->result()[0]->name;
+        } else {
+        	return false;
+        }
+	}
+
+	public function getDebit($id) {
+		$this->db->select('payrate');
+		$this->db->from('transaction');
+		$this->db->where('accountId',$id);
+		$this->db->where('type','DEBE');
+		$query = $this->db->get();
+		if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+        	return false;
+        }
+	}
+
+	public function getCredit($id) {
+		$this->db->select('payrate');
+		$this->db->from('transaction');
+		$this->db->where('accountId',$id);
+		$this->db->where('type','HABER');
+		$query = $this->db->get();
+		if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+        	return false;
+        }
 	}
 	
 	public function getSumOfAllAccount($type){

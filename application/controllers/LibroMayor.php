@@ -18,8 +18,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         public function verLibroMayor($id)
         {
-            // $data['libroMayor'] = $this->LibroMayorModel->getLibroMayor($id);
-            $data['id'] = $id;
+            $data['accountName'] = $this->LibroMayorModel->getAccountName($id);
+            $data['debit'] = $this->LibroMayorModel->getDebit($id);
+            $data['credit'] = $this->LibroMayorModel->getCredit($id);
             $this->load->view('templates/header');
             $this->load->view('libro-mayor/libro-mayor',$data);
             $this->load->view('templates/footer');
