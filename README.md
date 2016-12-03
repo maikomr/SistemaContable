@@ -16,14 +16,14 @@ Configurar el servidor MySQL con el user `root` y sin password.
 ### Paso 3
 Crear un Virtual Host con el siguiente contenido
 
-`<VirtualHost *:80>
-    ServerName sistema-contable
-    DocumentRoot "directorio-del-proyecto"
-    <Directory  "directorio-del-proyecto">
-        Options +Indexes +Includes +FollowSymLinks +MultiViews
-        AllowOverride All
-        Require local
-    </Directory>
+`<VirtualHost *:80>  
+    ServerName sistema-contable  
+    DocumentRoot "directorio-del-proyecto"  
+    <Directory  "directorio-del-proyecto">  
+        Options +Indexes +Includes +FollowSymLinks +MultiViews  
+        AllowOverride All  
+        Require local  
+    </Directory>  
 </VirtualHost>`
 
 Reemplazar `directorio-del-proyecto` por la ubicacion donde se encuentra el proyecto.
