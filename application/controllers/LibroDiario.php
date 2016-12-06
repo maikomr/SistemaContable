@@ -26,6 +26,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $data['totalDebit'] = $totalDebit;
             $data['totalCredit'] = $totalCredit;
 
+            if ($totalDebit == $totalCredit) {
+                $data['comprobacionTotales'] = 'iguales';
+            } else {
+                $data['comprobacionTotales'] = 'distintos';
+            }
+
             $this->load->view('templates/header');
             $this->load->view('libro-diario/index', $data);
             $this->load->view('templates/footer');

@@ -40,8 +40,8 @@
         <?php endforeach; ?>
         <tr>
             <td colspan="3"><strong>Total</strong></td>
-            <td><strong><?php echo $totalDebit ?></strong></td>
-            <td><strong><?php echo $totalCredit ?></strong></td>
+            <td class=<?php echo $comprobacionTotales; ?>><strong><?php echo $totalDebit ?></strong></td>
+            <td class=<?php echo $comprobacionTotales; ?>><strong><?php echo $totalCredit ?></strong></td>
         </tr>
     </table>
 </div>
