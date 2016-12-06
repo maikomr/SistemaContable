@@ -42,3 +42,11 @@ footer {
     border-color: #FF5722;
     text-emphasis: bold;
 }
+
+.iguales {
+    color: green;
+}
+
+.distintos {
+    color: red;
+}

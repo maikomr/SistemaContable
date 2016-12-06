@@ -11,6 +11,10 @@ class BalanceSumasSaldos extends CI_CONTROLLER
     {
         $accounts = $this->BalanceSumasSaldosModel->getAllAccounts();
         $balances = array();
+        $totalBalanceSumaDebe = 0;
+        $totalBalanceSumaHaber = 0;
+        $totalBalanceSaldoDeudor = 0;
+        $totalBalanceSaldoAcreedor = 0;
 
         foreach ($accounts as $account) {
             $debit = $this->BalanceSumasSaldosModel->getDebit($account->id);
@@ -46,12 +50,31 @@ class BalanceSumasSaldos extends CI_CONTROLLER
             $balance->saldoDebit = $saldoDebit;
             $balance->saldoCredit = $saldoCredit;
             $balances[] = $balance;
+
+            $totalBalanceSumaDebe += $totalDebit;
+            $totalBalanceSumaHaber += $totalCredit;
+            $totalBalanceSaldoDeudor += $saldoDebit;
+            $totalBalanceSaldoAcreedor += $saldoCredit;
         }
         
         
 
         $data['balances'] = $balances;
+        $data['totalBalanceSumaDebe'] = $totalBalanceSumaDebe;
+        $data['totalBalanceSumaHaber'] = $totalBalanceSumaHaber;
+        $data['totalBalanceSaldoDeudor'] = $totalBalanceSaldoDeudor;
+        $data['totalBalanceSaldoAcreedor'] = $totalBalanceSaldoAcreedor;
 
+        if ($totalBalanceSumaDebe == $totalBalanceSumaHaber) {
+            $data['comprobacionSumas'] = 'iguales';
+        } else {
+            $data['comprobacionSumas'] = 'distintos';
+        }
+        if ($totalBalanceSaldoDeudor == $totalBalanceSaldoAcreedor) {
+            $data['comprobacionSaldos'] = 'iguales';
+        } else {
+            $data['comprobacionSaldos'] = 'distintos';
+        }
 
         $this->load->view('templates/header');
         $this->load->view('balance-sumas-saldos/index', $data);

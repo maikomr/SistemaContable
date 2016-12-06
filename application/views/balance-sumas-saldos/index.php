@@ -21,5 +21,20 @@
                 <td><?php echo $balances[$i]->saldoCredit; ?></td>
             </tr>
         <?php } ?>
+        <tr>
+            <td colspan="2"></td>
+            <td class=<?php echo $comprobacionSumas; ?>>
+                <strong><?php echo $totalBalanceSumaDebe; ?></strong>
+            </td>
+            <td class=<?php echo $comprobacionSumas; ?>>
+                <strong><?php echo $totalBalanceSumaHaber; ?></strong>
+            </td>
+            <td class=<?php echo $comprobacionSaldos; ?>>
+                <strong><?php echo $totalBalanceSaldoDeudor; ?></strong>
+            </td>
+            <td class=<?php echo $comprobacionSaldos; ?>>
+                <strong><?php echo $totalBalanceSaldoAcreedor; ?></strong>
+            </td>
+        </tr>
     </table>
 </div>
