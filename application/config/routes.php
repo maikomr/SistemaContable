@@ -57,3 +57,4 @@ $route['libro-diario'] = 'libroDiario';
 
 $route['libro-mayor']='LibroMayor';
 $route['libro-mayor/(:num)'] = 'LibroMayor/verLibroMayor/$1';
+$route['balance-sumas-saldos'] = 'BalanceSumasSaldos';

@@ -26,7 +26,7 @@
             <li><a class="nav-menu" href="http://sistema-contable/index.php/libro-diario">Libro Diario</a></li>
             
             <li><a class="nav-menu" href="http://sistema-contable/index.php/libro-mayor">Libro Mayor</a></li>
-
+            <li><a class="nav-menu" href="http://sistema-contable/index.php/balance-sumas-saldos">Balance de Sumas y Saldos</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">
