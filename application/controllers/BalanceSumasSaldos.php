@@ -54,7 +54,7 @@ class BalanceSumasSaldos extends CI_CONTROLLER
 
 
         $this->load->view('templates/header');
-        $this->load->view('balance-sumas-saldos/index');
+        $this->load->view('balance-sumas-saldos/index', $data);
         $this->load->view('templates/footer');
     }
 }
