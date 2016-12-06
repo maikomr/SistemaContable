@@ -4,8 +4,12 @@
     </div>
     <table class="table table-bordered table-hover">
         <tr class= "primary-color-background">
-            <td><strong>Numero</strong></td>
-            <td><strong>Detalle</strong></td>
+            <td rowspan="2"><strong>Nº</strong></td>
+            <td rowspan="2"><strong>Detalle</strong></td>
+            <td colspan="2" style="text-align: center;"><strong>Sumas</strong></td>
+            <td colspan="2" style="text-align: center;"><strong>Saldos</strong></td>
+        </tr>
+        <tr class= "primary-color-background">
             <td><strong>Debe</strong></td>
             <td><strong>Haber</strong></td>
             <td><strong>Deudor</strong></td>
