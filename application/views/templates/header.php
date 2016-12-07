@@ -30,12 +30,12 @@
           </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" placeholder="Usuario" class="form-control">
+              <input type="text" name="usuario" placeholder="Usuario" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Contraseña" class="form-control">
+              <input type="password" name="contrasena" placeholder="Contraseña" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Ingresar</button>
+            <button type="submit" name="ingresar" class="btn btn-success">Ingresar</button>
           </form>
         </div>
       </div>
