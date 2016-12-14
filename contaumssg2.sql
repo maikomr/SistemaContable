@@ -10,6 +10,29 @@ CREATE SCHEMA IF NOT EXISTS `contaumssg2` DEFAULT CHARACTER SET latin1 ;
 USE `contaumssg2` ;
 
 -- -----------------------------------------------------
+-- Table `contaumssg2`.`ci_sessions`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `ci_sessions`;
+CREATE TABLE IF EXISTS `contaumssg2`.`ci_sessions` (
+  `session_id` VARCHAR(40) NOT NULL DEFAULT 0,
+  `ip_address` VARCHAR(45) NOT NULL DEFAULT 0,
+  `user_agent` VARCHAR(120) NOT NULL,
+  `last_activity` INT(10) UNSIGNED NOT NULL DEFAULT 0,
+  `user_data` TEXT NOT NULL,
+  PRIMARY KEY (`session_id`));
+
+
+-- -----------------------------------------------------
+-- Table `contaumssg2`.`user`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `contaumssg2`.`user` ;
+CREATE TABLE IF NOT EXISTS `contaumssg2`.`user` (
+  `id` INT(10) NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+-- -----------------------------------------------------
 -- Table `contaumssg2`.`accounts`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `contaumssg2`.`accounts` ;
@@ -43,6 +66,13 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+INSERT INTO `contaumssg2`.`user` (`username`, `password`) VALUES ('admin', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
+INSERT INTO `contaumssg2`.`user` (`username`, `password`) VALUES ('nicole', 'cc9ec3a9fc9954732a893d6e0abd7e3223dca656');
+INSERT INTO `contaumssg2`.`user` (`username`, `password`) VALUES ('maiko', '481a155e94d556ec33a7c81eb2da1cb8a65a72fd');
+INSERT INTO `contaumssg2`.`user` (`username`, `password`) VALUES ('ruddy', '6a502b3812837dd799fdb748039980f1ad06319b');
+INSERT INTO `contaumssg2`.`user` (`username`, `password`) VALUES ('brandon', '164516ae01fa1eda3a7927f90a64b7bb94fca4e7');
+INSERT INTO `contaumssg2`.`user` (`username`, `password`) VALUES ('diego', '6a6a49de021eb7953219b9ac892b7fdb27f4a58d');
 
 INSERT INTO `contaumssg2`.`accounts` (`name`) VALUES ('Caja M/N');
 INSERT INTO `contaumssg2`.`accounts` (`name`) VALUES ('Muebles y Enceres');

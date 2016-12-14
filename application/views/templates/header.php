@@ -23,20 +23,36 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a class="nav-menu" href="http://sistema-contable">Inicio</a></li>
-            <li><a class="nav-menu" href="http://sistema-contable/index.php/libro-diario">Libro Diario</a></li>
-            
-            <li><a class="nav-menu" href="http://sistema-contable/index.php/libro-mayor">Libro Mayor</a></li>
-            <li><a class="nav-menu" href="http://sistema-contable/index.php/balance-sumas-saldos">Balance de Sumas y Saldos</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" name="usuario" placeholder="Usuario" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" name="contrasena" placeholder="Contraseña" class="form-control">
-            </div>
-            <button type="submit" name="ingresar" class="btn btn-success">Ingresar</button>
-          </form>
+            <?php if ($this->session->userdata('isLoggedIn')) { ?>
+              <li><a class="nav-menu" href="http://sistema-contable/index.php/libro-diario">Libro Diario</a></li>
+              <li><a class="nav-menu" href="http://sistema-contable/index.php/libro-mayor">Libro Mayor</a></li>
+              <li><a class="nav-menu" href="http://sistema-contable/index.php/balance-sumas-saldos">Balance de 
+              Sumas y Saldos</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a class="nav-menu" href="#"><?php echo $this->session->userdata('username'); ?></a></li>
+              <li>
+                <a class="nav-menu" href="http://sistema-contable/index.php/logout_user">Salir</a>
+              </li>
+            </ul>
+            <?php } else { ?>
+            </ul>
+            <form class="navbar-form navbar-right" action="http://sistema-contable/index.php/login_user" method="post" accept-charset="utf-8">
+              <div class="form-group">
+                <input type="text" name="username" placeholder="Usuario" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="password" name="password" placeholder="Contraseña" class="form-control">
+              </div>
+              <button type="submit" name="submit" class="btn btn-success">Ingresar</button>
+              
+              <?php if (isset($error) && $error): ?>
+                <div class="alert alert-error">
+                  <a class="close" data-dismiss="alert" href="#">×</a>Usuario o contraseña inválidos!
+                </div>
+              <?php endif; ?>
+            </form>            
+            <?php } ?>
         </div>
       </div>
     </nav>

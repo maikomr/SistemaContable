@@ -4,6 +4,7 @@ class BalanceSumasSaldos extends CI_CONTROLLER
 {
     function __construct() {
         parent::__construct(); 
+        $this->load->library('session');
         $this->load->model('BalanceSumasSaldosModel');
     }
 

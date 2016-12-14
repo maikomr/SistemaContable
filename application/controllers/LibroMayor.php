@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     class LibroMayor extends CI_CONTROLLER
     {
     	function __construct(){
-    		parent::__construct(); 
+    		parent::__construct();
+            $this->load->library('session');
             $this->load->model('LibroMayorModel');
             $this->load->helper('url');
     	}

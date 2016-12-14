@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     {
         function __construct(){
             parent::__construct(); 
+            $this->load->library('session');
             $this->load->model('LibroDiarioModel');
             $this->load->helper('url');
         }
