@@ -30,12 +30,9 @@ Crear un Virtual Host con el siguiente contenido
 
 Reemplazar `directorio-del-proyecto` por la ubicacion donde se encuentra el proyecto.
 
-Tutorial de cómo crear virtual host en windows:
-[a link](https://styde.net/creando-virtual-hosts-con-apache-en-windows-para-wamp-o-xampp/)
+[Crear virtual host en windows](https://styde.net/creando-virtual-hosts-con-apache-en-windows-para-wamp-o-xampp/)
 
-
-Tutorial de cómo crear virtual host en linux:
-[a link](https://www.digitalocean.com/community/tutorials/como-configurar-virtual-host-de-apache-en-ubuntu-14-04-lts-es)
+[Crear virtual host en linux](https://www.digitalocean.com/community/tutorials/como-configurar-virtual-host-de-apache-en-ubuntu-14-04-lts-es)
 
 ### Paso 4
 Abrir un navegador e ir a la direccion http://sistema-contable
