@@ -9,18 +9,6 @@ DROP SCHEMA IF EXISTS `contaumssg2` ;
 CREATE SCHEMA IF NOT EXISTS `contaumssg2` DEFAULT CHARACTER SET latin1 ;
 USE `contaumssg2` ;
 
--- -----------------------------------------------------
--- Table `contaumssg2`.`ci_sessions`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ci_sessions`;
-CREATE TABLE IF NOT EXISTS `contaumssg2`.`ci_sessions` (
-  `session_id` VARCHAR(40) NOT NULL DEFAULT 0,
-  `ip_address` VARCHAR(45) NOT NULL DEFAULT 0,
-  `user_agent` VARCHAR(120) NOT NULL,
-  `last_activity` INT(10) UNSIGNED NOT NULL DEFAULT 0,
-  `user_data` TEXT NOT NULL,
-  PRIMARY KEY (`session_id`));
-
 
 -- -----------------------------------------------------
 -- Table `contaumssg2`.`user`
